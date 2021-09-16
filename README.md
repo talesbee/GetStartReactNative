@@ -15,11 +15,25 @@ Com tudo instalado, vamos a configuração da maquina para rodar os script. Prim
   - Se estiver restrito, usar o comando: Set-ExecutionPolicy unrestricted
   Com isso já podemos executar os comandos no Visual Studio Code.
   
+ É importante conferir se tudo esta configurado no Path do sistema (Variáveis do sistema), o que é necessario ter:
+ - Para usar o 'npm' no VSCode: %AppData%\Roaming\npm 
+  
 Agora vamos iniciar um projeto React, tendo a pasta já criada e selecionada no Visual Studio Code, seguiremos o tutorial do React = https://reactnative.dev/docs/environment-setup
 
+  Para inicar um projeto "EXPO" ondo roda a aplicação no aplicativo "Expo Go" no android:
   - Instalando as dependencias: npm install -g expo-cli
   - Criando um proejeto, onde Awesome é o nome do projeto: expo init AwesomeProject
-  - Entrando na pasta do projeto: cd AwesomeProject
-  - Executando o projeto no navegador: npm start
+  - Executando o projeto: npm start
+
+  Para iniciar um projeto onde roda a aplicação via emulador android ou no celular com cabo USB:
+  - Criando um proejeto, onde Awesome é o nome do projeto: npx react-native init AwesomeProject
+  - Entrando na pasta do projeto: npx react-native start
+  - Executando o projeto no navegador: npx react-native run-android
+  
+  Eu gosto de criar scripts para facilitar a execução dos comandos. 
+  Para isso, crie um arquivo '.txt' com o texto:
+    npx npx react-native run-android && npx react-native start
+  Depois mude a extensão do arquivo para '.bat'. Se colocar o arquivo dentro da pasta do projeto, no terminal, basta colocar as iniciais do arquivo
+  apertar tab que alto completa e dar enter. Outra opção é definir esse comando como tarefa no VSCode e criar um atalho para ela. 
 
 Pronto, seu ambiente de trabalho está preparado para programar em React!
